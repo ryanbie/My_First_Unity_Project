@@ -1,23 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class ExampleScript : MonoBehaviour {
 
-    public void Awake()
+    public void FixedUpdate()
     {
-        Debug.Log("Testing Awake");
+        Debug.Log("Testing fixedUpdate " + Time.fixedDeltaTime);
     }
-    public void OnEnable()
+
+    public void Update()
     {
-        Debug.Log("Testing Enable");   
-    }
-    public void Start()
-    {
-        Debug.Log("Testing Start");
-    }
-    public void OnDisable()
-    {
-        Debug.Log("Testing Disable");
+        Debug.Log("Testing Update " + Time.deltaTime);
     }
 }
